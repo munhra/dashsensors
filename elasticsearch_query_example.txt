@@ -1,0 +1,36 @@
+curl -XGET https://search-fti-es-szgjq3dzpsev2nkngqfamoegiu.us-west-2.es.amazonaws.com/iot_fti2/_search?pretty -d '{
+    "sort": [
+        {"datetime_idx": {"order": "asc"}}
+    ],
+    "query": {
+        "filtered": {
+            "filter": {
+                "bool": {
+                    "must": [{
+                        "exists": {
+                           "field": "dust"
+                        }
+                    },
+                    {
+                        "range": {
+                            "datetime_idx": {
+                                "gte": "1491004800000",
+                                "lte": "1491177600000"
+                            }
+                        }
+                    }]
+                }
+            }
+        }
+    }
+}
+'
+
+curl -XPUT https://search-fti-es-szgjq3dzpsev2nkngqfamoegiu.us-west-2.es.amazonaws.com/iot_fti2/iot_type/534d0e50-741d-497b-9412-c5bde0c2acd5 -d '{
+    "temperature": 32,
+    "datetime": "2017-09-27 17:10:34",
+    "datetime_idx": 1506532234000
+}
+'
+
+

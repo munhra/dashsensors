@@ -1,0 +1,700 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8A1063AA1F7535A9000557F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A1063A81F7535A9000557F7 /* Main.storyboard */; };
+		8A1063AC1F7535A9000557F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A1063AB1F7535A9000557F7 /* Assets.xcassets */; };
+		8A1C66CA1F7946BD002CDD33 /* DataPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1C66C91F7946BD002CDD33 /* DataPageViewController.swift */; };
+		8A4EDB441F7949A100FF2809 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4EDB431F7949A100FF2809 /* DataViewController.swift */; };
+		8A4EDB461F79605C00FF2809 /* TemperatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4EDB451F79605C00FF2809 /* TemperatureViewController.swift */; };
+		8A4EDB481F79678900FF2809 /* MethaneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4EDB471F79678900FF2809 /* MethaneViewController.swift */; };
+		8A4EDB4A1F7969A400FF2809 /* HumidityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4EDB491F7969A400FF2809 /* HumidityViewController.swift */; };
+		8A4EDB4C1F796AE700FF2809 /* COViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4EDB4B1F796AE700FF2809 /* COViewController.swift */; };
+		8A93886A1F7BC518007ACCF3 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9388691F7BC518007ACCF3 /* PageViewController.swift */; };
+		8A9389321F7BDF86007ACCF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9389311F7BDF86007ACCF3 /* AppDelegate.swift */; };
+		8A9389341F7BDF86007ACCF3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9389331F7BDF86007ACCF3 /* ViewController.swift */; };
+		8A9389371F7BDF86007ACCF3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A9389351F7BDF86007ACCF3 /* Main.storyboard */; };
+		8A9389391F7BDF86007ACCF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A9389381F7BDF86007ACCF3 /* Assets.xcassets */; };
+		8A93893C1F7BDF86007ACCF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A93893A1F7BDF86007ACCF3 /* LaunchScreen.storyboard */; };
+		8A9389441F7BEC01007ACCF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1063A41F7535A9000557F7 /* AppDelegate.swift */; };
+		8A9389491F7BEDD8007ACCF3 /* TemperatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4EDB451F79605C00FF2809 /* TemperatureViewController.swift */; };
+		8A93D78B1F7537D80069F5AD /* DustViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A93D78A1F7537D80069F5AD /* DustViewController.swift */; };
+		8AA931CE1F753BF400CE22C0 /* CustomLineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA931CD1F753BF400CE22C0 /* CustomLineChartView.swift */; };
+		8AA931DC1F79347200CE22C0 /* CustomBarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA931DB1F79347200CE22C0 /* CustomBarChartView.swift */; };
+		8AA931DE1F793A1700CE22C0 /* ChartFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA931DD1F793A1700CE22C0 /* ChartFormatter.swift */; };
+		8AB0100D1F7BEE9E00AF76DB /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4EDB431F7949A100FF2809 /* DataViewController.swift */; };
+		8AB0100E1F7BEEA700AF76DB /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9388691F7BC518007ACCF3 /* PageViewController.swift */; };
+		8AB0100F1F7BEEAD00AF76DB /* DataPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1C66C91F7946BD002CDD33 /* DataPageViewController.swift */; };
+		8AB010101F7BEEB200AF76DB /* ChartFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA931DD1F793A1700CE22C0 /* ChartFormatter.swift */; };
+		8AB010111F7BEEB700AF76DB /* DustViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A93D78A1F7537D80069F5AD /* DustViewController.swift */; };
+		8AB010121F7BEEBB00AF76DB /* HumidityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4EDB491F7969A400FF2809 /* HumidityViewController.swift */; };
+		8AB010131F7BEEBE00AF76DB /* MethaneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4EDB471F79678900FF2809 /* MethaneViewController.swift */; };
+		8AB010141F7BEEC100AF76DB /* COViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4EDB4B1F796AE700FF2809 /* COViewController.swift */; };
+		8AB010151F7BEED200AF76DB /* CustomLineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA931CD1F753BF400CE22C0 /* CustomLineChartView.swift */; };
+		8AB010161F7BEED500AF76DB /* CustomBarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA931DB1F79347200CE22C0 /* CustomBarChartView.swift */; };
+		CAB3B23CC4C3BE3BD7C50B0D /* Pods_DashSensorIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373E745C973F0CBFFD2C8449 /* Pods_DashSensorIOS.framework */; };
+		DC9319102D71C65FD4D54BF1 /* Pods_DashSensor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E473E6344B8913CE1899AA4A /* Pods_DashSensor.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		09D0C91400D17A2460FADB00 /* Pods-DashSensor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DashSensor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DashSensor/Pods-DashSensor.debug.xcconfig"; sourceTree = "<group>"; };
+		25FCC9531AEF03553CF058D0 /* Pods-DashSensor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DashSensor.release.xcconfig"; path = "Pods/Target Support Files/Pods-DashSensor/Pods-DashSensor.release.xcconfig"; sourceTree = "<group>"; };
+		373E745C973F0CBFFD2C8449 /* Pods_DashSensorIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DashSensorIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		52C1FDB5FEBBD7C3A6F40F0A /* Pods-DashSensorIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DashSensorIOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-DashSensorIOS/Pods-DashSensorIOS.release.xcconfig"; sourceTree = "<group>"; };
+		8A1063A11F7535A9000557F7 /* DashSensor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DashSensor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A1063A41F7535A9000557F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8A1063A91F7535A9000557F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8A1063AB1F7535A9000557F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8A1063AD1F7535A9000557F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A1C66C91F7946BD002CDD33 /* DataPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPageViewController.swift; sourceTree = "<group>"; };
+		8A4EDB431F7949A100FF2809 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
+		8A4EDB451F79605C00FF2809 /* TemperatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureViewController.swift; sourceTree = "<group>"; };
+		8A4EDB471F79678900FF2809 /* MethaneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethaneViewController.swift; sourceTree = "<group>"; };
+		8A4EDB491F7969A400FF2809 /* HumidityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumidityViewController.swift; sourceTree = "<group>"; };
+		8A4EDB4B1F796AE700FF2809 /* COViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COViewController.swift; sourceTree = "<group>"; };
+		8A9388691F7BC518007ACCF3 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		8A93892F1F7BDF86007ACCF3 /* DashSensorIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DashSensorIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A9389311F7BDF86007ACCF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8A9389331F7BDF86007ACCF3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8A9389361F7BDF86007ACCF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8A9389381F7BDF86007ACCF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8A93893B1F7BDF86007ACCF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8A93893D1F7BDF86007ACCF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A93D78A1F7537D80069F5AD /* DustViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DustViewController.swift; sourceTree = "<group>"; };
+		8AA931CD1F753BF400CE22C0 /* CustomLineChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLineChartView.swift; sourceTree = "<group>"; };
+		8AA931DB1F79347200CE22C0 /* CustomBarChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBarChartView.swift; sourceTree = "<group>"; };
+		8AA931DD1F793A1700CE22C0 /* ChartFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartFormatter.swift; sourceTree = "<group>"; };
+		CF23B028DBA027A362BC4324 /* Pods-DashSensorIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DashSensorIOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DashSensorIOS/Pods-DashSensorIOS.debug.xcconfig"; sourceTree = "<group>"; };
+		E473E6344B8913CE1899AA4A /* Pods_DashSensor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DashSensor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8A10639E1F7535A9000557F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC9319102D71C65FD4D54BF1 /* Pods_DashSensor.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A93892C1F7BDF86007ACCF3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAB3B23CC4C3BE3BD7C50B0D /* Pods_DashSensorIOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4383E61F434DE161A89210E5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E473E6344B8913CE1899AA4A /* Pods_DashSensor.framework */,
+				373E745C973F0CBFFD2C8449 /* Pods_DashSensorIOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6086B320E84AEE598DC7A083 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				09D0C91400D17A2460FADB00 /* Pods-DashSensor.debug.xcconfig */,
+				25FCC9531AEF03553CF058D0 /* Pods-DashSensor.release.xcconfig */,
+				CF23B028DBA027A362BC4324 /* Pods-DashSensorIOS.debug.xcconfig */,
+				52C1FDB5FEBBD7C3A6F40F0A /* Pods-DashSensorIOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8A1063981F7535A9000557F7 = {
+			isa = PBXGroup;
+			children = (
+				8A1063A31F7535A9000557F7 /* DashSensorTvOS */,
+				8A9389301F7BDF86007ACCF3 /* DashSensorIOS */,
+				8A1063A21F7535A9000557F7 /* Products */,
+				6086B320E84AEE598DC7A083 /* Pods */,
+				4383E61F434DE161A89210E5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8A1063A21F7535A9000557F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8A1063A11F7535A9000557F7 /* DashSensor.app */,
+				8A93892F1F7BDF86007ACCF3 /* DashSensorIOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8A1063A31F7535A9000557F7 /* DashSensorTvOS */ = {
+			isa = PBXGroup;
+			children = (
+				8AA931CC1F753BCD00CE22C0 /* View */,
+				8A93D7891F7537110069F5AD /* View Controller */,
+				8A1063A81F7535A9000557F7 /* Main.storyboard */,
+				8A1063AD1F7535A9000557F7 /* Info.plist */,
+				8A1063A41F7535A9000557F7 /* AppDelegate.swift */,
+				8AA931D61F792D1400CE22C0 /* Support Files */,
+				8A1063AB1F7535A9000557F7 /* Assets.xcassets */,
+			);
+			path = DashSensorTvOS;
+			sourceTree = "<group>";
+		};
+		8A9389301F7BDF86007ACCF3 /* DashSensorIOS */ = {
+			isa = PBXGroup;
+			children = (
+				8A9389311F7BDF86007ACCF3 /* AppDelegate.swift */,
+				8A9389331F7BDF86007ACCF3 /* ViewController.swift */,
+				8A9389351F7BDF86007ACCF3 /* Main.storyboard */,
+				8A9389381F7BDF86007ACCF3 /* Assets.xcassets */,
+				8A93893A1F7BDF86007ACCF3 /* LaunchScreen.storyboard */,
+				8A93893D1F7BDF86007ACCF3 /* Info.plist */,
+			);
+			path = DashSensorIOS;
+			sourceTree = "<group>";
+		};
+		8A93D7891F7537110069F5AD /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8A9388691F7BC518007ACCF3 /* PageViewController.swift */,
+				8A1C66C91F7946BD002CDD33 /* DataPageViewController.swift */,
+				8A4EDB431F7949A100FF2809 /* DataViewController.swift */,
+				8A93D78A1F7537D80069F5AD /* DustViewController.swift */,
+				8A4EDB451F79605C00FF2809 /* TemperatureViewController.swift */,
+				8A4EDB491F7969A400FF2809 /* HumidityViewController.swift */,
+				8A4EDB471F79678900FF2809 /* MethaneViewController.swift */,
+				8A4EDB4B1F796AE700FF2809 /* COViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		8AA931CC1F753BCD00CE22C0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8AA931CD1F753BF400CE22C0 /* CustomLineChartView.swift */,
+				8AA931DB1F79347200CE22C0 /* CustomBarChartView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8AA931D61F792D1400CE22C0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8AA931DD1F793A1700CE22C0 /* ChartFormatter.swift */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8A1063A01F7535A9000557F7 /* DashSensor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A1063B01F7535A9000557F7 /* Build configuration list for PBXNativeTarget "DashSensor" */;
+			buildPhases = (
+				00787DD20827692875F02940 /* [CP] Check Pods Manifest.lock */,
+				8A10639D1F7535A9000557F7 /* Sources */,
+				8A10639E1F7535A9000557F7 /* Frameworks */,
+				8A10639F1F7535A9000557F7 /* Resources */,
+				6F72C97DB4E3FE67ED4569A9 /* [CP] Embed Pods Frameworks */,
+				A09E54FD8B6F37E09C6C2907 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DashSensor;
+			productName = DashSensor;
+			productReference = 8A1063A11F7535A9000557F7 /* DashSensor.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8A93892E1F7BDF86007ACCF3 /* DashSensorIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A93893E1F7BDF86007ACCF3 /* Build configuration list for PBXNativeTarget "DashSensorIOS" */;
+			buildPhases = (
+				7F6986009CC1CB9799415597 /* [CP] Check Pods Manifest.lock */,
+				8A93892B1F7BDF86007ACCF3 /* Sources */,
+				8A93892C1F7BDF86007ACCF3 /* Frameworks */,
+				8A93892D1F7BDF86007ACCF3 /* Resources */,
+				A3A1B216122D5EB2E61ED066 /* [CP] Embed Pods Frameworks */,
+				B2E36E08BBEC08FCE5755229 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DashSensorIOS;
+			productName = DashSensorIOS;
+			productReference = 8A93892F1F7BDF86007ACCF3 /* DashSensorIOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8A1063991F7535A9000557F7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = Venturus;
+				TargetAttributes = {
+					8A1063A01F7535A9000557F7 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					8A93892E1F7BDF86007ACCF3 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 8A10639C1F7535A9000557F7 /* Build configuration list for PBXProject "DashSensor" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8A1063981F7535A9000557F7;
+			productRefGroup = 8A1063A21F7535A9000557F7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8A1063A01F7535A9000557F7 /* DashSensor */,
+				8A93892E1F7BDF86007ACCF3 /* DashSensorIOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8A10639F1F7535A9000557F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A1063AC1F7535A9000557F7 /* Assets.xcassets in Resources */,
+				8A1063AA1F7535A9000557F7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A93892D1F7BDF86007ACCF3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A93893C1F7BDF86007ACCF3 /* LaunchScreen.storyboard in Resources */,
+				8A9389391F7BDF86007ACCF3 /* Assets.xcassets in Resources */,
+				8A9389371F7BDF86007ACCF3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00787DD20827692875F02940 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DashSensor-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F72C97DB4E3FE67ED4569A9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DashSensor/Pods-DashSensor-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire-tvOS/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper-tvOS/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts-tvOS/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/ElasticSearchQuery-tvOS/ElasticSearchQuery.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper-tvOS/ObjectMapper.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ElasticSearchQuery.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DashSensor/Pods-DashSensor-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F6986009CC1CB9799415597 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DashSensorIOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A09E54FD8B6F37E09C6C2907 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DashSensor/Pods-DashSensor-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3A1B216122D5EB2E61ED066 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DashSensorIOS/Pods-DashSensorIOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire-iOS/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper-iOS/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts-iOS/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/ElasticSearchQuery-iOS/ElasticSearchQuery.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper-iOS/ObjectMapper.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ElasticSearchQuery.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DashSensorIOS/Pods-DashSensorIOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B2E36E08BBEC08FCE5755229 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DashSensorIOS/Pods-DashSensorIOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8A10639D1F7535A9000557F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A9389441F7BEC01007ACCF3 /* AppDelegate.swift in Sources */,
+				8A4EDB481F79678900FF2809 /* MethaneViewController.swift in Sources */,
+				8AA931CE1F753BF400CE22C0 /* CustomLineChartView.swift in Sources */,
+				8A93D78B1F7537D80069F5AD /* DustViewController.swift in Sources */,
+				8A93886A1F7BC518007ACCF3 /* PageViewController.swift in Sources */,
+				8AA931DE1F793A1700CE22C0 /* ChartFormatter.swift in Sources */,
+				8A4EDB4A1F7969A400FF2809 /* HumidityViewController.swift in Sources */,
+				8A4EDB4C1F796AE700FF2809 /* COViewController.swift in Sources */,
+				8A1C66CA1F7946BD002CDD33 /* DataPageViewController.swift in Sources */,
+				8AA931DC1F79347200CE22C0 /* CustomBarChartView.swift in Sources */,
+				8A4EDB441F7949A100FF2809 /* DataViewController.swift in Sources */,
+				8A4EDB461F79605C00FF2809 /* TemperatureViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A93892B1F7BDF86007ACCF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AB0100D1F7BEE9E00AF76DB /* DataViewController.swift in Sources */,
+				8AB010141F7BEEC100AF76DB /* COViewController.swift in Sources */,
+				8AB010131F7BEEBE00AF76DB /* MethaneViewController.swift in Sources */,
+				8AB0100F1F7BEEAD00AF76DB /* DataPageViewController.swift in Sources */,
+				8AB010111F7BEEB700AF76DB /* DustViewController.swift in Sources */,
+				8AB010101F7BEEB200AF76DB /* ChartFormatter.swift in Sources */,
+				8AB0100E1F7BEEA700AF76DB /* PageViewController.swift in Sources */,
+				8A9389341F7BDF86007ACCF3 /* ViewController.swift in Sources */,
+				8AB010151F7BEED200AF76DB /* CustomLineChartView.swift in Sources */,
+				8AB010121F7BEEBB00AF76DB /* HumidityViewController.swift in Sources */,
+				8A9389321F7BDF86007ACCF3 /* AppDelegate.swift in Sources */,
+				8AB010161F7BEED500AF76DB /* CustomBarChartView.swift in Sources */,
+				8A9389491F7BEDD8007ACCF3 /* TemperatureViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8A1063A81F7535A9000557F7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A1063A91F7535A9000557F7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8A9389351F7BDF86007ACCF3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A9389361F7BDF86007ACCF3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8A93893A1F7BDF86007ACCF3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A93893B1F7BDF86007ACCF3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8A1063AE1F7535A9000557F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = appletvos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TVOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Debug;
+		};
+		8A1063AF1F7535A9000557F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = appletvos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TVOS_DEPLOYMENT_TARGET = 11.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8A1063B11F7535A9000557F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09D0C91400D17A2460FADB00 /* Pods-DashSensor.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7H2Y5W6XAP;
+				INFOPLIST_FILE = DashSensorTvOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.org.venturus.DashSensor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Debug;
+		};
+		8A1063B21F7535A9000557F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25FCC9531AEF03553CF058D0 /* Pods-DashSensor.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7H2Y5W6XAP;
+				INFOPLIST_FILE = DashSensorTvOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.org.venturus.DashSensor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Release;
+		};
+		8A93893F1F7BDF86007ACCF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF23B028DBA027A362BC4324 /* Pods-DashSensorIOS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7H2Y5W6XAP;
+				INFOPLIST_FILE = DashSensorIOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.org.venturus.DashSensorIOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8A9389401F7BDF86007ACCF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52C1FDB5FEBBD7C3A6F40F0A /* Pods-DashSensorIOS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7H2Y5W6XAP;
+				INFOPLIST_FILE = DashSensorIOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.org.venturus.DashSensorIOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8A10639C1F7535A9000557F7 /* Build configuration list for PBXProject "DashSensor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A1063AE1F7535A9000557F7 /* Debug */,
+				8A1063AF1F7535A9000557F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A1063B01F7535A9000557F7 /* Build configuration list for PBXNativeTarget "DashSensor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A1063B11F7535A9000557F7 /* Debug */,
+				8A1063B21F7535A9000557F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A93893E1F7BDF86007ACCF3 /* Build configuration list for PBXNativeTarget "DashSensorIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A93893F1F7BDF86007ACCF3 /* Debug */,
+				8A9389401F7BDF86007ACCF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8A1063991F7535A9000557F7 /* Project object */;
+}
