@@ -1,0 +1,6 @@
+framework module ElasticSearchQuery {
+  umbrella header "ElasticSearchQuery-tvOS-umbrella.h"
+
+  export *
+  module * { export * }
+}
