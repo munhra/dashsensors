@@ -102,18 +102,10 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/Alamofire-tvOS/Alamofire.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper-tvOS/AlamofireObjectMapper.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Charts-tvOS/Charts.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/ElasticSearchQuery-tvOS/ElasticSearchQuery.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/ObjectMapper-tvOS/ObjectMapper.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/Alamofire-tvOS/Alamofire.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper-tvOS/AlamofireObjectMapper.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Charts-tvOS/Charts.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/ElasticSearchQuery-tvOS/ElasticSearchQuery.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/ObjectMapper-tvOS/ObjectMapper.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait
