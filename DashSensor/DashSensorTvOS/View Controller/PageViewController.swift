@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import SocketIO
 
 class PageViewController: UIPageViewController {
+    
+    var socket : SocketIOClient = SocketIOClient(socketURL: URL(string: "http://192.168.42.1:3001")!, config: [])
     
     lazy var orderedViewControllers: [UIViewController] = {
         var pageViewControllers: [UIViewController] = []
@@ -22,6 +25,7 @@ class PageViewController: UIPageViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.socket.connect()
         
         self.dataSource = self
         
@@ -45,6 +49,7 @@ class PageViewController: UIPageViewController {
     func newVc(viewController: String, dataType: String) -> UIViewController {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: viewController) as! DataPageViewController
         vc.dataType = dataType
+        vc.socket = self.socket
         return vc
     }
     

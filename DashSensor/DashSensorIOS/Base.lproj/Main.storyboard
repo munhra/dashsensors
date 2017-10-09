@@ -234,6 +234,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NOW" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aju-jb-FPT">
+                                <rect key="frame" x="650" y="204" width="349" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.84109157990000005" blue="0.26576063370000003" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="gaQ-sC-E8T"/>
@@ -243,11 +250,12 @@
                         <outlet property="customLineChartView" destination="xIn-Gj-mZf" id="vwV-Gn-d22"/>
                         <outlet property="maxLabel" destination="LyW-TI-Oof" id="gjm-fs-911"/>
                         <outlet property="minLabel" destination="3NX-l6-hwK" id="JzL-io-yEl"/>
+                        <outlet property="nowLabel" destination="Aju-jb-FPT" id="pfv-TO-znj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kHn-Ch-Sfn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1240" y="613"/>
+            <point key="canvasLocation" x="-1240.4676258992806" y="612.94964028776985"/>
         </scene>
         <!--Dust View Controller-->
         <scene sceneID="HH7-Iw-wey">

@@ -107,6 +107,8 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Charts-iOS/Charts.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/ElasticSearchQuery-iOS/ElasticSearchQuery.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/ObjectMapper-iOS/ObjectMapper.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift-iOS/SocketIO.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Starscream-iOS/Starscream.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Alamofire-iOS/Alamofire.framework"
@@ -114,6 +116,8 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Charts-iOS/Charts.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/ElasticSearchQuery-iOS/ElasticSearchQuery.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/ObjectMapper-iOS/ObjectMapper.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift-iOS/SocketIO.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Starscream-iOS/Starscream.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

@@ -310,6 +310,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NOW" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uaR-JH-cxi">
+                                <rect key="frame" x="1130" y="403" width="680" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.84109157986111116" blue="0.26576063368055558" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="GO7-qX-txw"/>
@@ -319,6 +326,7 @@
                         <outlet property="customLineChartView" destination="TS6-lJ-HNS" id="jg2-uW-CVo"/>
                         <outlet property="maxLabel" destination="DOc-Gm-m0B" id="edd-2M-d05"/>
                         <outlet property="minLabel" destination="HKM-D5-xC1" id="rMq-ks-9z6"/>
+                        <outlet property="nowLabel" destination="uaR-JH-cxi" id="FDO-nS-SGb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QBj-qh-yCq" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -9,11 +9,13 @@
 import UIKit
 import ElasticSearchQuery
 import Charts
+import SocketIO
 
 class DataViewController: UIViewController {
     let timeInterval = [86400000, 604800000, 1209600000, 2629743000]
     var timeIntervalIndex = 0
     var dataType = ""
+    var socket : SocketIOClient?
     
     func handleData(avg: Int, max: Int, min: Int, dataArray: [Int], timestampArray: [Int]) {
 

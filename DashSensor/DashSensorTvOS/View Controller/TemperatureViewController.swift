@@ -12,6 +12,7 @@ import Charts
 
 class TemperatureViewController: DataViewController {
     
+    @IBOutlet weak var nowLabel: UILabel!
     @IBOutlet weak var avgLabel: UILabel!
     @IBOutlet weak var maxLabel: UILabel!
     @IBOutlet weak var minLabel: UILabel!
@@ -30,9 +31,24 @@ class TemperatureViewController: DataViewController {
         self.view.layoutIfNeeded()
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.registerSocketEvents()
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         customLineChartView.startAnimation()
+    }
+    
+    func registerSocketEvents() {
+        socket?.on("sensorJSON") {data, ack in
+            if let dataJSON = data as? [[String: Any]]  {
+                if let temperature = dataJSON[0]["temperature"] as? Int {
+                    self.nowLabel.text = "Now: " + String(temperature)
+                }
+            }
+        }
     }
 
     

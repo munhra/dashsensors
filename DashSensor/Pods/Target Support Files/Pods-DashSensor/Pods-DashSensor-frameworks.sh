@@ -107,6 +107,8 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Charts-tvOS/Charts.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/ElasticSearchQuery-tvOS/ElasticSearchQuery.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/ObjectMapper-tvOS/ObjectMapper.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift-tvOS/SocketIO.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Starscream-tvOS/Starscream.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Alamofire-tvOS/Alamofire.framework"
@@ -114,6 +116,8 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Charts-tvOS/Charts.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/ElasticSearchQuery-tvOS/ElasticSearchQuery.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/ObjectMapper-tvOS/ObjectMapper.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift-tvOS/SocketIO.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Starscream-tvOS/Starscream.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

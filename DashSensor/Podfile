@@ -8,6 +8,7 @@ target 'DashSensor' do
   # Pods for DashSensor
   pod 'ElasticSearchQuery', :git => 'https://github.com/Dekkoh/ElasticSearchQuery'
   pod 'Charts'
+  pod 'Socket.IO-Client-Swift'
 
 end
 
@@ -18,5 +19,6 @@ target 'DashSensorIOS' do
   # Pods for DashSensor
   pod 'ElasticSearchQuery', :git => 'https://github.com/Dekkoh/ElasticSearchQuery'
   pod 'Charts'
+  pod 'Socket.IO-Client-Swift'
 
 end

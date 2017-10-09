@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import SocketIO
 
 class DataPageViewController: UIPageViewController {
     
+    var socket : SocketIOClient?
     var dataType = ""
     
     lazy var orderedViewControllers: [UIViewController] = {
@@ -46,6 +48,7 @@ class DataPageViewController: UIPageViewController {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: viewController) as! DataViewController
         vc.timeIntervalIndex = timeIntervalIndex
         vc.dataType = self.dataType
+        vc.socket = self.socket
         return vc
     }
     

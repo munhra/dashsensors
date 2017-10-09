@@ -34,6 +34,6 @@ class HumidityViewController: DataViewController {
         super.viewDidAppear(animated)
         customLineChartView.startAnimation()
     }
-
+    
     
 }
