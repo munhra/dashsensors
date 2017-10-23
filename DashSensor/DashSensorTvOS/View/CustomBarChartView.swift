@@ -18,6 +18,7 @@ class CustomBarChartView: BarChartView {
     }
     
     func setupView() {
+
         // No data setup
         self.noDataTextColor = UIColor.white
         self.noDataText = "No data for the chart"

@@ -12,28 +12,36 @@ import Charts
 
 class TemperatureViewController: DataViewController {
     
-    @IBOutlet weak var nowLabel: UILabel!
-    @IBOutlet weak var avgLabel: UILabel!
+    @IBOutlet weak var cardView: UIView!
+    @IBOutlet weak var timeIntervalLabel: UILabel!
+    @IBOutlet weak var dateIntervalLabel: UILabel!
     @IBOutlet weak var maxLabel: UILabel!
     @IBOutlet weak var minLabel: UILabel!
+    @IBOutlet weak var highlightedDataLabel: UILabel!
+    @IBOutlet weak var highlightedTextLabel: UILabel!
     @IBOutlet weak var customLineChartView: CustomLineChartView!
     
     override func handleData(avg: Int, max: Int, min: Int, dataArray: [Int], timestampArray: [Int]) {
-        avgLabel.text = "Average: " + String(avg)
-        maxLabel.text = "Maximum: " + String(max)
-        minLabel.text = "Minimum: " + String(min)
+        super.reduceData(dataArray: dataArray, timestampArray: timestampArray)
         
-        if timeIntervalIndex == 0 {
-            customLineChartView.isHourFormat = true
+        maxLabel.text = String(reducedMax) + "º C"
+        minLabel.text = String(reducedMin) + "º C"
+        if (timeIntervalIndex > 0) {
+            highlightedDataLabel.text = String(avg) + "º C"
         }
-        customLineChartView.setData(dataArray: dataArray, timestampArray: timestampArray, field: "Temperature")
         
-        self.view.layoutIfNeeded()
+//        if timeIntervalIndex == 0 {
+//            customLineChartView.isHourFormat = true
+//        }
+        customLineChartView.setData(dataArray: reducedDataArray, timestampArray: reducedTimestampArray, field: "Temperature")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.registerSocketEvents()
+        setupCardView()
+        setupIntervalLabels()
+        setupDataLabels()
+        customLineChartView.themeColor = UIColor(red: 80/255, green: 201/255, blue: 246/255, alpha: 1.0)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -45,10 +53,37 @@ class TemperatureViewController: DataViewController {
         socket?.on("sensorJSON") {data, ack in
             if let dataJSON = data as? [[String: Any]]  {
                 if let temperature = dataJSON[0]["temperature"] as? Int {
-                    self.nowLabel.text = "Now: " + String(temperature)
+                    self.highlightedDataLabel.text = String(temperature) + "º C"
                 }
             }
         }
+    }
+    
+    func setupIntervalLabels() {
+        timeIntervalLabel.text = self.timeIntervalText[timeIntervalIndex]
+        let minutesRange = timeInterval[timeIntervalIndex] / 60000
+        let startDate = Calendar.current.date(byAdding: .minute, value: -minutesRange, to: Date())
+        let endDate = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM"
+        let dateIntervalString = formatter.string(from: startDate!) + " - " + formatter.string(from: endDate)
+        dateIntervalLabel.text = dateIntervalString
+    }
+    
+    func setupDataLabels() {
+        if (timeIntervalIndex == 0) {
+            self.highlightedTextLabel.text = "Currently"
+            self.registerSocketEvents()
+        } else {
+            self.highlightedTextLabel.text = "Average"
+        }
+    }
+    
+    func setupCardView() {
+        cardView.layer.shadowColor = UIColor.lightGray.cgColor
+        cardView.layer.shadowRadius = 5.0
+        cardView.layer.shadowOpacity = 0.7
+        cardView.layer.shadowOffset = CGSize(width: 0, height: 10)
     }
 
     

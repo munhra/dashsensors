@@ -11,11 +11,12 @@ import SocketIO
 
 class PageViewController: UIPageViewController {
     
-    var socket : SocketIOClient = SocketIOClient(socketURL: URL(string: "http://192.168.42.1:3001")!, config: [])
+    var socket : SocketIOClient = SocketIOClient(socketURL: URL(string: "http://192.168.42.1:3003")!, config: [])
+    public var mainViewController : MainViewController?
     
     lazy var orderedViewControllers: [UIViewController] = {
         var pageViewControllers: [UIViewController] = []
-        let dataTypes = ["temperature", "dust", "humidity", "methane", "co"]
+        let dataTypes = ["temperature", "humidity", "dust", "co", "methane"]
 //        let dataTypes = ["temperature", "temperature"]
         for i in 0..<dataTypes.count {
             pageViewControllers.append(self.newVc(viewController: "dataPageViewController", dataType: dataTypes[i]))
@@ -28,6 +29,8 @@ class PageViewController: UIPageViewController {
         self.socket.connect()
         
         self.dataSource = self
+        self.delegate = self
+        self.view.backgroundColor = UIColor.clear
         
         // This sets up the first view that will show up on our page control
         if let firstViewController = orderedViewControllers.first {
@@ -56,7 +59,10 @@ class PageViewController: UIPageViewController {
 }
 
 extension PageViewController: UIPageViewControllerDelegate {
-    
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        let pageContentViewController = pageViewController.viewControllers![0]
+        mainViewController?.highlightCell(index: orderedViewControllers.index(of: pageContentViewController)!)
+    }
 }
 
 extension PageViewController: UIPageViewControllerDataSource {

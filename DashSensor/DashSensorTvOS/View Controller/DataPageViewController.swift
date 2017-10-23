@@ -16,7 +16,7 @@ class DataPageViewController: UIPageViewController {
     
     lazy var orderedViewControllers: [UIViewController] = {
         var viewControllers: [UIViewController] = []
-        for i in 0..<4 {
+        for i in 0..<3 {
             viewControllers.append(self.newVc(viewController: dataType + "ViewController", timeIntervalIndex: i))
         }
         return viewControllers
@@ -26,6 +26,7 @@ class DataPageViewController: UIPageViewController {
         super.viewDidLoad()
         
         self.dataSource = self
+        self.view.backgroundColor = UIColor.clear
         
         // This sets up the first view that will show up on our page control
         if let firstViewController = orderedViewControllers.first {

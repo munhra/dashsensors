@@ -12,7 +12,16 @@ import Charts
 import SocketIO
 
 class DataViewController: UIViewController {
-    let timeInterval = [86400000, 604800000, 1209600000, 2629743000]
+//    let timeIntervalText = ["Daily", "Weekly", "Monthly", "Quarterly"]
+//    let timeInterval = [86400000, 604800000, 2629743000, 7889229000]
+    let timeIntervalText = ["Last Month", "2 Months Ago", "3 Months Ago"]
+    let timeInterval = [2629743000, 5259486000, 7889229000]
+    var nSlices = 20
+    
+    var reducedDataArray: [Int] = []
+    var reducedTimestampArray: [Int] = []
+    var reducedMax = 0
+    var reducedMin = 0
     var timeIntervalIndex = 0
     var dataType = ""
     var socket : SocketIOClient?
@@ -21,15 +30,59 @@ class DataViewController: UIViewController {
 
     }
     
+    func reduceData(dataArray: [Int], timestampArray: [Int]) {
+        var sliceSize = 1
+        reducedMax = 0
+        reducedMin = 0
+        
+        if (nSlices <= dataArray.count) {
+            sliceSize = Int(ceil(Double(dataArray.count) / Double(nSlices)))
+        } else {
+            nSlices = dataArray.count
+        }
+        
+        for i in 0 ..< nSlices {
+            let sliceStart = i * sliceSize
+            var sliceEnd = (i+1) * sliceSize
+            
+            if (sliceStart > dataArray.count) {
+                break
+            }
+            
+            if (sliceEnd > dataArray.count) {
+                sliceEnd = dataArray.count
+            }
+            let dataSegment = dataArray[sliceStart ..< sliceEnd]
+            let timestampSegment = timestampArray[sliceStart ..< sliceEnd]
+            
+            var dataSegmentMean = 0
+            var timestampSegmentMean = 0
+            
+            if (dataSegment.count > 0) {
+                dataSegmentMean = dataSegment.reduce(0, +) / dataSegment.count
+                timestampSegmentMean = timestampSegment.reduce(0, +) / timestampSegment.count
+            }
+            
+            self.reducedDataArray.append(dataSegmentMean)
+            self.reducedTimestampArray.append(timestampSegmentMean)
+        }
+        
+        if (reducedDataArray.count > 0) {
+            reducedMax = reducedDataArray.max()!
+            reducedMin = reducedDataArray.min()!
+        }
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let epochNow = Int(ceil(Date().timeIntervalSince1970 * 1000))
         let epochPastString = String(epochNow - timeInterval[timeIntervalIndex])
         let epochNowString = String(epochNow)
-        
+
         ElasticSearchQuery.setURL(url: "https://search-fti-es-szgjq3dzpsev2nkngqfamoegiu.us-west-2.es.amazonaws.com/iot_fti2/_search?")
-        
+
         switch self.dataType {
         case "dust":
             ElasticSearchQuery.getDust(from: epochPastString, to: epochNowString, callback: handleData)
@@ -56,7 +109,7 @@ class DataViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.view.layoutIfNeeded()
+        
     }
     
     

@@ -190,6 +190,8 @@ public class ElasticSearchQuery {
         pages: Int,
         callback: @escaping (Int, Int, Int, [Int], [Int]) -> Void) {
         
+        
+        self.data = []
         let dispatchGroup = DispatchGroup()
         
         for _ in (0..<pages) {
@@ -246,6 +248,7 @@ public class ElasticSearchQuery {
                 })
                 
                 let reducedData = self.data.reduce([], +)
+                
                 self.extractData(rawData: reducedData, field: field, callback: callback)
 
             }

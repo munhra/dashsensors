@@ -10,6 +10,16 @@
 		8A1063AA1F7535A9000557F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A1063A81F7535A9000557F7 /* Main.storyboard */; };
 		8A1063AC1F7535A9000557F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A1063AB1F7535A9000557F7 /* Assets.xcassets */; };
 		8A1C66CA1F7946BD002CDD33 /* DataPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1C66C91F7946BD002CDD33 /* DataPageViewController.swift */; };
+		8A4C31261F965D3F00254F35 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4C31251F965D3F00254F35 /* TestViewController.swift */; };
+		8A4C31271F965D3F00254F35 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4C31251F965D3F00254F35 /* TestViewController.swift */; };
+		8A4C31291F96604E00254F35 /* TestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4C31281F96604E00254F35 /* TestCell.swift */; };
+		8A4C312A1F96604E00254F35 /* TestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4C31281F96604E00254F35 /* TestCell.swift */; };
+		8A4C312C1F9667E300254F35 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4C312B1F9667E300254F35 /* MainViewController.swift */; };
+		8A4C312D1F9667E300254F35 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4C312B1F9667E300254F35 /* MainViewController.swift */; };
+		8A4C312F1F977E6F00254F35 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4C312E1F977E6F00254F35 /* CollectionViewCell.swift */; };
+		8A4C31301F977E6F00254F35 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4C312E1F977E6F00254F35 /* CollectionViewCell.swift */; };
+		8A4C31321F978B3600254F35 /* Fontes in Resources */ = {isa = PBXBuildFile; fileRef = 8A4C31311F978B1400254F35 /* Fontes */; };
+		8A4C31331F978B3700254F35 /* Fontes in Resources */ = {isa = PBXBuildFile; fileRef = 8A4C31311F978B1400254F35 /* Fontes */; };
 		8A4EDB441F7949A100FF2809 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4EDB431F7949A100FF2809 /* DataViewController.swift */; };
 		8A4EDB461F79605C00FF2809 /* TemperatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4EDB451F79605C00FF2809 /* TemperatureViewController.swift */; };
 		8A4EDB481F79678900FF2809 /* MethaneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4EDB471F79678900FF2809 /* MethaneViewController.swift */; };
@@ -52,6 +62,11 @@
 		8A1063AB1F7535A9000557F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A1063AD1F7535A9000557F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A1C66C91F7946BD002CDD33 /* DataPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPageViewController.swift; sourceTree = "<group>"; };
+		8A4C31251F965D3F00254F35 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		8A4C31281F96604E00254F35 /* TestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCell.swift; sourceTree = "<group>"; };
+		8A4C312B1F9667E300254F35 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		8A4C312E1F977E6F00254F35 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		8A4C31311F978B1400254F35 /* Fontes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fontes; sourceTree = "<group>"; };
 		8A4EDB431F7949A100FF2809 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
 		8A4EDB451F79605C00FF2809 /* TemperatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureViewController.swift; sourceTree = "<group>"; };
 		8A4EDB471F79678900FF2809 /* MethaneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethaneViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +178,7 @@
 		8A93D7891F7537110069F5AD /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8A4C312B1F9667E300254F35 /* MainViewController.swift */,
 				8A9388691F7BC518007ACCF3 /* PageViewController.swift */,
 				8A1C66C91F7946BD002CDD33 /* DataPageViewController.swift */,
 				8A4EDB431F7949A100FF2809 /* DataViewController.swift */,
@@ -171,6 +187,7 @@
 				8A4EDB491F7969A400FF2809 /* HumidityViewController.swift */,
 				8A4EDB471F79678900FF2809 /* MethaneViewController.swift */,
 				8A4EDB4B1F796AE700FF2809 /* COViewController.swift */,
+				8A4C31251F965D3F00254F35 /* TestViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -180,6 +197,8 @@
 			children = (
 				8AA931CD1F753BF400CE22C0 /* CustomLineChartView.swift */,
 				8AA931DB1F79347200CE22C0 /* CustomBarChartView.swift */,
+				8A4C31281F96604E00254F35 /* TestCell.swift */,
+				8A4C312E1F977E6F00254F35 /* CollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -187,6 +206,7 @@
 		8AA931D61F792D1400CE22C0 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
+				8A4C31311F978B1400254F35 /* Fontes */,
 				8AA931DD1F793A1700CE22C0 /* ChartFormatter.swift */,
 			);
 			path = "Support Files";
@@ -281,6 +301,7 @@
 			files = (
 				8A1063AC1F7535A9000557F7 /* Assets.xcassets in Resources */,
 				8A1063AA1F7535A9000557F7 /* Main.storyboard in Resources */,
+				8A4C31321F978B3600254F35 /* Fontes in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A93893C1F7BDF86007ACCF3 /* LaunchScreen.storyboard in Resources */,
+				8A4C31331F978B3700254F35 /* Fontes in Resources */,
 				8A9389391F7BDF86007ACCF3 /* Assets.xcassets in Resources */,
 				8A9389371F7BDF86007ACCF3 /* Main.storyboard in Resources */,
 			);
@@ -435,8 +457,12 @@
 				8AA931CE1F753BF400CE22C0 /* CustomLineChartView.swift in Sources */,
 				8A93D78B1F7537D80069F5AD /* DustViewController.swift in Sources */,
 				8A93886A1F7BC518007ACCF3 /* PageViewController.swift in Sources */,
+				8A4C31261F965D3F00254F35 /* TestViewController.swift in Sources */,
 				8AA931DE1F793A1700CE22C0 /* ChartFormatter.swift in Sources */,
+				8A4C31291F96604E00254F35 /* TestCell.swift in Sources */,
 				8A4EDB4A1F7969A400FF2809 /* HumidityViewController.swift in Sources */,
+				8A4C312C1F9667E300254F35 /* MainViewController.swift in Sources */,
+				8A4C312F1F977E6F00254F35 /* CollectionViewCell.swift in Sources */,
 				8A4EDB4C1F796AE700FF2809 /* COViewController.swift in Sources */,
 				8A1C66CA1F7946BD002CDD33 /* DataPageViewController.swift in Sources */,
 				8AA931DC1F79347200CE22C0 /* CustomBarChartView.swift in Sources */,
@@ -449,12 +475,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A4C31271F965D3F00254F35 /* TestViewController.swift in Sources */,
 				8AB0100D1F7BEE9E00AF76DB /* DataViewController.swift in Sources */,
+				8A4C31301F977E6F00254F35 /* CollectionViewCell.swift in Sources */,
 				8AB010141F7BEEC100AF76DB /* COViewController.swift in Sources */,
 				8AB010131F7BEEBE00AF76DB /* MethaneViewController.swift in Sources */,
 				8AB0100F1F7BEEAD00AF76DB /* DataPageViewController.swift in Sources */,
 				8AB010111F7BEEB700AF76DB /* DustViewController.swift in Sources */,
 				8AB010101F7BEEB200AF76DB /* ChartFormatter.swift in Sources */,
+				8A4C312D1F9667E300254F35 /* MainViewController.swift in Sources */,
+				8A4C312A1F96604E00254F35 /* TestCell.swift in Sources */,
 				8AB0100E1F7BEEA700AF76DB /* PageViewController.swift in Sources */,
 				8A9389341F7BDF86007ACCF3 /* ViewController.swift in Sources */,
 				8AB010151F7BEED200AF76DB /* CustomLineChartView.swift in Sources */,

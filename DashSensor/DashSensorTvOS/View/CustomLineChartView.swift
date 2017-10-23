@@ -11,6 +11,8 @@ import Charts
 
 class CustomLineChartView: LineChartView {
     var isHourFormat = false
+    public var themeColor = UIColor.clear
+    let lightGray = UIColor(red: 206/255, green: 206/255, blue: 206/255, alpha: 1.0)
     
     private var chartData = LineChartData()
     
@@ -24,6 +26,7 @@ class CustomLineChartView: LineChartView {
         self.noDataTextColor = UIColor.black
         self.noDataText = "No data for the chart"
         self.backgroundColor = UIColor.white
+        self.chartDescription?.enabled = false
         
     }
     
@@ -32,7 +35,6 @@ class CustomLineChartView: LineChartView {
         
         if (dataArray.count == 0) {
             self.data = nil
-            self.layoutIfNeeded()
             return
         }
         
@@ -43,8 +45,21 @@ class CustomLineChartView: LineChartView {
         }
         
         let chartDataSet = LineChartDataSet(values: lineDataEntry, label: field)
-        chartDataSet.drawCirclesEnabled = false
+        chartDataSet.drawCirclesEnabled = true
         chartDataSet.mode = .horizontalBezier
+        chartDataSet.colors = [self.themeColor]
+        chartDataSet.circleColors = [self.themeColor]
+        chartDataSet.circleRadius = 5.0
+        chartDataSet.circleHoleRadius = 4.0
+        
+        let gradientColors = [themeColor.cgColor, UIColor.clear.cgColor] as CFArray
+        let colorLocations : [CGFloat] = [1.0, 0.0]
+        guard let gradient = CGGradient(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors: gradientColors, locations: colorLocations) else {
+            print("gradient error")
+            return
+        }
+        chartDataSet.fill = Fill.fillWithLinearGradient(gradient, angle: 90.0)
+        chartDataSet.drawFilledEnabled = true
         
         chartData = LineChartData()
         chartData.setDrawValues(true)
@@ -56,17 +71,31 @@ class CustomLineChartView: LineChartView {
         if (isHourFormat) {
             formatter.dateFormatter.dateFormat = "HH:mm"
         } else {
-            formatter.dateFormatter.dateFormat = "dd/MM/yyyy"
+            formatter.dateFormatter.dateFormat = "dd/MM"
         }
         
         let xaxis: XAxis = XAxis()
         xaxis.valueFormatter = formatter
     
         self.xAxis.labelPosition = .bottom
-        self.xAxis.drawGridLinesEnabled = false
+        self.xAxis.drawGridLinesEnabled = true
         self.xAxis.valueFormatter = xaxis.valueFormatter
-        self.leftAxis.drawGridLinesEnabled = false
+        self.xAxis.gridColor = UIColor(red: 206/255, green: 206/255, blue: 206/255, alpha: 0.5)
+        self.xAxis.labelTextColor = lightGray
+        self.xAxis.labelFont = UIFont(name: "Helvetica", size: 18)!
+        self.xAxis.labelCount = 10
+        
         self.leftAxis.drawLabelsEnabled = true
+        self.leftAxis.labelTextColor = lightGray
+        self.leftAxis.labelFont = UIFont(name: "Helvetica", size: 18)!
+        self.leftAxis.axisLineColor = UIColor.clear
+        self.leftAxis.gridColor = lightGray
+        self.leftAxis.labelCount = 6
+        
+        self.rightAxis.drawLabelsEnabled = false
+        self.rightAxis.axisLineColor = UIColor.clear
+        
+        self.legend.enabled = false
         
         startAnimation()
         
@@ -76,9 +105,9 @@ class CustomLineChartView: LineChartView {
         if chartData.dataSets.count == 0 {
             return
         }
+        
         self.animate(yAxisDuration: 1.0, easingOption: .easeInOutCirc)
         self.data = chartData
-        self.layoutIfNeeded()
     }
 
     /*
