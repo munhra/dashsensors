@@ -44,37 +44,11 @@ class MainViewController: UIViewController {
         }
 
     }
-//        if previousRow != nil {
-//            let previousCell = collectionView.cellForItem(at: IndexPath(item: previousRow!, section: 0))
-//            previousCell?.backgroundColor = UIColor.white
-////            previousCell?.layer.borderWidth = 0.0
-////            previousCell?.layer.shadowRadius = 0.0
-////            previousCell?.layer.shadowOpacity = 0
-//        }
-//
-//        let nextCell = collectionView.cellForItem(at: IndexPath(item: nextRow, section: 0))
-//        nextCell?.backgroundColor = UIColor.cyan
-////        nextCell?.layer.borderWidth = 8.0
-////        nextCell?.layer.borderColor = UIColor.black.cgColor
-////        nextCell?.layer.shadowColor = UIColor.black.cgColor
-////        nextCell?.layer.shadowRadius = 10.0
-////        nextCell?.layer.shadowOpacity = 0.9
-////        nextCell?.layer.shadowOffset = CGSize(width: 0, height: 0)
-//    }
     
-
 }
 
 extension MainViewController: UICollectionViewDelegate {
-//    override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
-//        let previousFocusedCell = context.previouslyFocusedView as? CollectionViewCell
-//        if previousFocusedCell != nil {
-//            previousFocusedCell?.unfocus()
-//        }
-//
-//        let nextFocusedCell = context.nextFocusedView as! CollectionViewCell
-//        nextFocusedCell.focus()
-//    }
+
 }
 
 extension MainViewController: UICollectionViewDataSource {

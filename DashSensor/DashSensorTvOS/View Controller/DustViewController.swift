@@ -21,7 +21,7 @@ class DustViewController: DataViewController {
     @IBOutlet weak var highlightedTextLabel: UILabel!
     @IBOutlet weak var customLineChartView: CustomLineChartView!
     
-    override func handleData(avg: Int, max: Int, min: Int, dataArray: [Int], timestampArray: [Int]) {
+    override func handleData(avg: Int, max: Int, min: Int, dataArray: [Int], timestampArray: [Int],  firstDataBeforeStart: Int) {
         super.reduceData(dataArray: dataArray, timestampArray: timestampArray)
         
         maxLabel.text = String(reducedMax)
@@ -37,7 +37,7 @@ class DustViewController: DataViewController {
 //        if timeIntervalIndex == 0 {
 //            customLineChartView.isHourFormat = true
 //        }
-        customLineChartView.setData(dataArray: reducedDataArray, timestampArray: reducedTimestampArray, field: "Dust")
+        customLineChartView.setData(dataArray: reducedDataArray, timestampArray: reducedTimestampArray, field: "Dust", timeInterval: timeInterval[timeIntervalIndex])
         
     }
     

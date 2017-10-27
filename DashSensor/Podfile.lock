@@ -25,7 +25,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   ElasticSearchQuery:
-    :commit: 3dad50136c5334a97bbc2d44a4adfc3fbfe277d8
+    :commit: a100ecd99337e9ff74494f19a0e47c619dd1c95d
     :git: https://github.com/Dekkoh/ElasticSearchQuery
 
 SPEC CHECKSUMS:

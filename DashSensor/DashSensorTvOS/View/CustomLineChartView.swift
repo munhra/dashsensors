@@ -10,6 +10,7 @@ import UIKit
 import Charts
 
 class CustomLineChartView: LineChartView {
+    
     var isHourFormat = false
     public var themeColor = UIColor.clear
     let lightGray = UIColor(red: 206/255, green: 206/255, blue: 206/255, alpha: 1.0)
@@ -27,11 +28,11 @@ class CustomLineChartView: LineChartView {
         self.noDataText = "No data for the chart"
         self.backgroundColor = UIColor.white
         self.chartDescription?.enabled = false
-        
     }
     
-    func setData(dataArray: [Int], timestampArray: [Int], field: String) {
+    func setData(dataArray: [Int], timestampArray: [Int], field: String, timeInterval: Int) {
         var lineDataEntry: [ChartDataEntry] = []
+        let nowEpochMilliseconds = Date().timeIntervalSince1970 * 1000
         
         if (dataArray.count == 0) {
             self.data = nil
@@ -51,6 +52,7 @@ class CustomLineChartView: LineChartView {
         chartDataSet.circleColors = [self.themeColor]
         chartDataSet.circleRadius = 5.0
         chartDataSet.circleHoleRadius = 4.0
+        chartDataSet.valueFont = UIFont(name: "Helvetica", size: 18)!
         
         let gradientColors = [themeColor.cgColor, UIColor.clear.cgColor] as CFArray
         let colorLocations : [CGFloat] = [1.0, 0.0]
@@ -84,6 +86,8 @@ class CustomLineChartView: LineChartView {
         self.xAxis.labelTextColor = lightGray
         self.xAxis.labelFont = UIFont(name: "Helvetica", size: 18)!
         self.xAxis.labelCount = 10
+//        self.xAxis.axisMaximum = nowEpochMilliseconds
+//        self.xAxis.axisMinimum = nowEpochMilliseconds - Double(timeInterval)
         
         self.leftAxis.drawLabelsEnabled = true
         self.leftAxis.labelTextColor = lightGray
@@ -119,3 +123,4 @@ class CustomLineChartView: LineChartView {
     */
 
 }
+

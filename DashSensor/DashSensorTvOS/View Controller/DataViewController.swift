@@ -26,7 +26,7 @@ class DataViewController: UIViewController {
     var dataType = ""
     var socket : SocketIOClient?
     
-    func handleData(avg: Int, max: Int, min: Int, dataArray: [Int], timestampArray: [Int]) {
+    func handleData(avg: Int, max: Int, min: Int, dataArray: [Int], timestampArray: [Int], firstDataBeforeStart: Int) {
 
     }
     
@@ -35,11 +35,13 @@ class DataViewController: UIViewController {
         reducedMax = 0
         reducedMin = 0
         
-        if (nSlices <= dataArray.count) {
+        if (nSlices < dataArray.count) {
             sliceSize = Int(ceil(Double(dataArray.count) / Double(nSlices)))
         } else {
             nSlices = dataArray.count
         }
+        
+        
         
         for i in 0 ..< nSlices {
             let sliceStart = i * sliceSize
@@ -61,10 +63,10 @@ class DataViewController: UIViewController {
             if (dataSegment.count > 0) {
                 dataSegmentMean = dataSegment.reduce(0, +) / dataSegment.count
                 timestampSegmentMean = timestampSegment.reduce(0, +) / timestampSegment.count
+                
+                self.reducedDataArray.append(dataSegmentMean)
+                self.reducedTimestampArray.append(timestampSegmentMean)
             }
-            
-            self.reducedDataArray.append(dataSegmentMean)
-            self.reducedTimestampArray.append(timestampSegmentMean)
         }
         
         if (reducedDataArray.count > 0) {
@@ -82,7 +84,7 @@ class DataViewController: UIViewController {
         let epochNowString = String(epochNow)
 
         ElasticSearchQuery.setURL(url: "https://search-fti-es-szgjq3dzpsev2nkngqfamoegiu.us-west-2.es.amazonaws.com/iot_fti2/_search?")
-
+        
         switch self.dataType {
         case "dust":
             ElasticSearchQuery.getDust(from: epochPastString, to: epochNowString, callback: handleData)

@@ -17,7 +17,6 @@ class PageViewController: UIPageViewController {
     lazy var orderedViewControllers: [UIViewController] = {
         var pageViewControllers: [UIViewController] = []
         let dataTypes = ["temperature", "humidity", "dust", "co", "methane"]
-//        let dataTypes = ["temperature", "temperature"]
         for i in 0..<dataTypes.count {
             pageViewControllers.append(self.newVc(viewController: "dataPageViewController", dataType: dataTypes[i]))
         }

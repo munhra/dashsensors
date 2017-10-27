@@ -21,8 +21,11 @@ class TemperatureViewController: DataViewController {
     @IBOutlet weak var highlightedTextLabel: UILabel!
     @IBOutlet weak var customLineChartView: CustomLineChartView!
     
-    override func handleData(avg: Int, max: Int, min: Int, dataArray: [Int], timestampArray: [Int]) {
+    override func handleData(avg: Int, max: Int, min: Int, dataArray: [Int], timestampArray: [Int], firstDataBeforeStart: Int) {
         super.reduceData(dataArray: dataArray, timestampArray: timestampArray)
+        print(firstDataBeforeStart)
+        print(dataArray.count)
+        print(timestampArray.count)
         
         maxLabel.text = String(reducedMax) + "º C"
         minLabel.text = String(reducedMin) + "º C"
@@ -33,7 +36,7 @@ class TemperatureViewController: DataViewController {
 //        if timeIntervalIndex == 0 {
 //            customLineChartView.isHourFormat = true
 //        }
-        customLineChartView.setData(dataArray: reducedDataArray, timestampArray: reducedTimestampArray, field: "Temperature")
+        customLineChartView.setData(dataArray: reducedDataArray, timestampArray: reducedTimestampArray, field: "Temperature", timeInterval: timeInterval[timeIntervalIndex])
     }
     
     override func viewDidLoad() {
