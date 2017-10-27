@@ -10,3 +10,11 @@ https://medium.com/@felicity.johnson.mail/lets-make-some-charts-ios-charts-5b8e4
 
 ## Open source framework for ESP8266
 https://github.com/SuperHouse/esp-open-rtos
+
+## Firmware in HuzzaFeather ESP8266
+Using libs:
+'''
+https://github.com/adafruit/Adafruit_Sensor
+https://github.com/adafruit/DHT-sensor-library
+'''
+
