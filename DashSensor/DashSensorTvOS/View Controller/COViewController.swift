@@ -22,7 +22,7 @@ class COViewController: DataViewController {
     @IBOutlet weak var customLineChartView: CustomLineChartView!
     
     override func handleData(avg: Int, max: Int, min: Int, dataArray: [Int], timestampArray: [Int], firstDataBeforeStart: Int) {
-        super.reduceData(dataArray: dataArray, timestampArray: timestampArray)
+        super.reduceData(dataArray: dataArray, timestampArray: timestampArray, firstDataBeforeStart: firstDataBeforeStart)
         
         maxLabel.text = String(reducedMax) + " %"
         minLabel.text = String(reducedMin) + " %"
@@ -34,10 +34,10 @@ class COViewController: DataViewController {
             highlightedDataLabel.text = String(describing: reducedDataArray.last!) + " %"
         }
         
-//        if timeIntervalIndex == 0 {
-//            customLineChartView.isHourFormat = true
-//        }
-        customLineChartView.setData(dataArray: reducedDataArray, timestampArray: reducedTimestampArray, field: "CO", timeInterval: timeInterval[timeIntervalIndex])
+        if timeIntervalIndex == 0 {
+            customLineChartView.isHourFormat = true
+        }
+        customLineChartView.setData(dataArray: reducedDataArray, timestampArray: reducedTimestampArray, field: "CO", timeInterval: timeInterval[timeIntervalIndex], reducedTimeInterval: reducedTimeInterval[timeIntervalIndex])
     }
     
     override func viewDidLoad() {
@@ -56,8 +56,8 @@ class COViewController: DataViewController {
     func setupIntervalLabels() {
         timeIntervalLabel.text = self.timeIntervalText[timeIntervalIndex]
         let minutesRange = timeInterval[timeIntervalIndex] / 60000
-        let startDate = Calendar.current.date(byAdding: .minute, value: -minutesRange, to: Date())
-        let endDate = Date()
+        let startDate = Calendar.current.date(byAdding: .minute, value: -minutesRange, to: dateNow)
+        let endDate = dateNow
         let formatter = DateFormatter()
         formatter.dateFormat = "dd/MM"
         let dateIntervalString = formatter.string(from: startDate!) + " - " + formatter.string(from: endDate)

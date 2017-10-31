@@ -12,10 +12,12 @@ import Charts
 import SocketIO
 
 class DataViewController: UIViewController {
-//    let timeIntervalText = ["Daily", "Weekly", "Monthly", "Quarterly"]
-//    let timeInterval = [86400000, 604800000, 2629743000, 7889229000]
-    let timeIntervalText = ["Last Month", "2 Months Ago", "3 Months Ago"]
-    let timeInterval = [2629743000, 5259486000, 7889229000]
+    let timeIntervalText = ["Daily", "Weekly", "Monthly", "Quarterly"]
+    let timeInterval = [86400000, 604800000, 2592000000, 7776000000]
+    var reducedTimeInterval = [3600000, 21600000, 86400000, 172800000]
+//    let timeIntervalText = ["Last Month", "2 Months Ago", "3 Months Ago"]
+//    let timeInterval = [2629743000, 5259486000, 7889229000]
+    var dateNow = Date()
     var nSlices = 20
     
     var reducedDataArray: [Int] = []
@@ -30,48 +32,38 @@ class DataViewController: UIViewController {
 
     }
     
-    func reduceData(dataArray: [Int], timestampArray: [Int]) {
-        var sliceSize = 1
-        reducedMax = 0
-        reducedMin = 0
+    func reduceData(dataArray: [Int], timestampArray: [Int], firstDataBeforeStart: Int) {
+        var lastData = firstDataBeforeStart
+        var datePointer = Int(ceil(self.dateNow.timeIntervalSince1970 * 1000)) - timeInterval[timeIntervalIndex]
+        var i = 0
         
-        if (nSlices < dataArray.count) {
-            sliceSize = Int(ceil(Double(dataArray.count) / Double(nSlices)))
-        } else {
-            nSlices = dataArray.count
+        while datePointer <= Int(dateNow.timeIntervalSince1970 * 1000) {
+            var dataSegment = 0
+            var segmentSize  = 0
+            if timestampArray.count > 0 {
+                while i < timestampArray.count && timestampArray[i] < datePointer {
+                    dataSegment += dataArray[i]
+                    i += 1
+                    segmentSize += 1
+                }
+            }
+            
+            if (segmentSize == 0) {
+                dataSegment = lastData
+            } else {
+                dataSegment /= segmentSize
+                lastData = dataSegment
+            }
+            
+            self.reducedDataArray.append(dataSegment)
+            self.reducedTimestampArray.append(datePointer)
+            
+            datePointer += reducedTimeInterval[timeIntervalIndex]
         }
         
-        
-        
-        for i in 0 ..< nSlices {
-            let sliceStart = i * sliceSize
-            var sliceEnd = (i+1) * sliceSize
-            
-            if (sliceStart > dataArray.count) {
-                break
-            }
-            
-            if (sliceEnd > dataArray.count) {
-                sliceEnd = dataArray.count
-            }
-            let dataSegment = dataArray[sliceStart ..< sliceEnd]
-            let timestampSegment = timestampArray[sliceStart ..< sliceEnd]
-            
-            var dataSegmentMean = 0
-            var timestampSegmentMean = 0
-            
-            if (dataSegment.count > 0) {
-                dataSegmentMean = dataSegment.reduce(0, +) / dataSegment.count
-                timestampSegmentMean = timestampSegment.reduce(0, +) / timestampSegment.count
-                
-                self.reducedDataArray.append(dataSegmentMean)
-                self.reducedTimestampArray.append(timestampSegmentMean)
-            }
-        }
-        
-        if (reducedDataArray.count > 0) {
-            reducedMax = reducedDataArray.max()!
+        if reducedDataArray.count > 0 {
             reducedMin = reducedDataArray.min()!
+            reducedMax = reducedDataArray.max()!
         }
         
     }
@@ -79,7 +71,7 @@ class DataViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let epochNow = Int(ceil(Date().timeIntervalSince1970 * 1000))
+        let epochNow = Int(ceil(self.dateNow.timeIntervalSince1970 * 1000))
         let epochPastString = String(epochNow - timeInterval[timeIntervalIndex])
         let epochNowString = String(epochNow)
 

@@ -16,7 +16,7 @@ class DataPageViewController: UIPageViewController {
     
     lazy var orderedViewControllers: [UIViewController] = {
         var viewControllers: [UIViewController] = []
-        for i in 0..<3 {
+        for i in 0..<4 {
             viewControllers.append(self.newVc(viewController: dataType + "ViewController", timeIntervalIndex: i))
         }
         return viewControllers

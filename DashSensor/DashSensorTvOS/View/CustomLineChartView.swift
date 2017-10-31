@@ -30,9 +30,8 @@ class CustomLineChartView: LineChartView {
         self.chartDescription?.enabled = false
     }
     
-    func setData(dataArray: [Int], timestampArray: [Int], field: String, timeInterval: Int) {
+    func setData(dataArray: [Int], timestampArray: [Int], field: String, timeInterval: Int, reducedTimeInterval: Int) {
         var lineDataEntry: [ChartDataEntry] = []
-        let nowEpochMilliseconds = Date().timeIntervalSince1970 * 1000
         
         if (dataArray.count == 0) {
             self.data = nil
@@ -85,9 +84,7 @@ class CustomLineChartView: LineChartView {
         self.xAxis.gridColor = UIColor(red: 206/255, green: 206/255, blue: 206/255, alpha: 0.5)
         self.xAxis.labelTextColor = lightGray
         self.xAxis.labelFont = UIFont(name: "Helvetica", size: 18)!
-        self.xAxis.labelCount = 10
-//        self.xAxis.axisMaximum = nowEpochMilliseconds
-//        self.xAxis.axisMinimum = nowEpochMilliseconds - Double(timeInterval)
+        self.xAxis.labelCount = timeInterval / (reducedTimeInterval * 2)
         
         self.leftAxis.drawLabelsEnabled = true
         self.leftAxis.labelTextColor = lightGray
